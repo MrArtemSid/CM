@@ -101,11 +101,11 @@ def gauss_method(matrix, delta):
 
     rel_err_sol = norm_inv_matrix * delta
     print(
-        f"Относительная погрешность решения (||A^(-1)|| * ∆b) = {norm_inv_matrix:.{float_p}f} * {delta:.{float_p}f} <= {rel_err_sol:.{float_p + 1}f}")
+        f"Абсолютная погрешность решения (||A^(-1)|| * ∆b) = {norm_inv_matrix:.{float_p}f} * {delta:.{float_p}f} <= {rel_err_sol:.{float_p + 1}f}")
 
     abs_err = norm_matrix * norm_inv_matrix * rel_err_b
     print(
-        f"Абсолютная погрешность решения (||A|| * ||A^(-1)|| * δb) = {norm_matrix:.{float_p}f} * {norm_inv_matrix:.{float_p}f} * {rel_err_b:.{float_p}f} <= {abs_err:.{float_p + 1}f}")
+        f"Относительная погрешность решения (||A|| * ||A^(-1)|| * δb) = {norm_matrix:.{float_p}f} * {norm_inv_matrix:.{float_p}f} * {rel_err_b:.{float_p}f} <= {abs_err:.{float_p + 1}f}")
 
 
 def jacobi_convertion(matrix):
