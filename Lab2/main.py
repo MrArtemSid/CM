@@ -120,7 +120,7 @@ def check_jacobi(matrix, p):
     ret = False
     for i in range(len(matrix)):
         sum_el = sum(matrix[i]) - matrix[i][i]
-        print(f"{matrix[i][i]} >= {" + ".join([f"{matrix[i][j]:.{p}f}" for j in range(len(matrix)) if j != i])}")
+        print(f"{matrix[i][i]} >= {' + '.join([f'{matrix[i][j]:.{p}f}' for j in range(len(matrix)) if j != i])}")
         if sum_el >= matrix[i][i]:
             ret = True
             break
