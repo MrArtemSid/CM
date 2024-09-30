@@ -157,7 +157,7 @@ def do_iterations(jacobi_matrix, cnt, delta):
 
         print(k + 1, *np.round(iterations[-1], round_cnt + 1), round(max_diff, round_cnt + 1))
     print()
-    print(f"Для получения нужной точности {delta} потребовалось {required_cnt + 1} операций")
+    print(f"Для получения нужной точности {delta} потребовалось {required_cnt + 1} итерации")
     return ans, diff_ans
 
 
