@@ -5,7 +5,7 @@ from scipy.optimize import fsolve
 from numpy.linalg import inv, norm
 from prettytable import PrettyTable
 from math import ceil, log
-
+from warnings import filterwarnings
 
 def find_sign_changes(x_values, y1_values, y2_values):
     intervals = []
@@ -186,6 +186,9 @@ def gradient_descent_optimized(grad_f, grad_f_x1, grad_f_x2, initial_guess, eps=
 
 
 def main():
+    # Для исключения предупреждений выхода аргумента за пределы области определения
+    filterwarnings("ignore", category=RuntimeWarning)
+
     min_value, max_value = -10, 10
     x1, x2 = sp.symbols("x1 x2")
 
